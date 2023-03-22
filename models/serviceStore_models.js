@@ -24,7 +24,11 @@ const serviceStoreShecma = new mongoose.Schema({
     quantityService:{
         type:"String",
         require:"true"
-    }
+    },
+    timeService:[{
+        type:'Object',
+        require:'true'
+    }]
 })
 
 const serviceStore = mongoose.model("serviceStore",serviceStoreShecma)

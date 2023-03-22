@@ -35,6 +35,7 @@ const productService = {
                     descriptionService: body.descriptionService,
                     typeService: body.typeService,
                     quantityService: body.quantityService,
+                    timeService:body.timeService
                 })
                 const id = await ObjectserviceStore.save();
                 const _id = id._id
