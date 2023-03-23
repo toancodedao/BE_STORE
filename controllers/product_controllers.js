@@ -9,6 +9,8 @@ const productCrollers = {
             req.body.image = req.dowloadUrl
             const token_headers = req.headers.token;
             const token = await token_headers.split(' ');
+            req.body.timeService = JSON.parse(req.body.timeService)
+            console.log('boddyyyy', req.body)
             await productService.addProductService(req.body, token[1])
             res.status(200).json({
                 message: 'sussecfully'
