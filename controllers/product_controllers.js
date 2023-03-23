@@ -16,6 +16,7 @@ const productCrollers = {
                 message: 'sussecfully'
             })
         } catch (error) {
+            console.log('error', error.toString())
             res.status(500).json({
                 message: 'failed'
             })
